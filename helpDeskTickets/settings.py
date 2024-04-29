@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-5)sz_i%0)=esvv#9%+*fdwxl)e8n_n4j-#ppbq844do=z&scig
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['aqueous-island-68452-a33e6407fc83.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['aqueous-island-68452-a33e6407fc83.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -56,7 +56,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    'https://your-vercel-deployed-frontend.vercel.app',
+    'https://help-desk-tickets.vercel.app/'
 ]
 
 ROOT_URLCONF = 'helpDeskTickets.urls'
