@@ -56,7 +56,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    'https://help-desk-tickets.vercel.app/'
+    'https://help-desk-tickets.vercel.app'
 ]
 
 ROOT_URLCONF = 'helpDeskTickets.urls'
