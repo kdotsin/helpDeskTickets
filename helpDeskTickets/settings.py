@@ -54,6 +54,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    'https://your-vercel-deployed-frontend.vercel.app',
 ]
 
 ROOT_URLCONF = 'helpDeskTickets.urls'
