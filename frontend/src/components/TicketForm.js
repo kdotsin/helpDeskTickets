@@ -13,8 +13,9 @@ function TicketForm() {
             email,
             description,
         };
+        const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000/'
         try {
-            await axios.post('http://localhost:8000/api/tickets/', ticketData);
+            const response = await axios.post(`${apiUrl}/api/tickets/`, ticketData);
             alert('Ticket Submitted Successfully!');
             setName('');
             setEmail('');
