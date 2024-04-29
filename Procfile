@@ -1,1 +1,1 @@
-web: gunicorn helpDeskTicket.wsgi --log-file -
+web: gunicorn helpDeskTickets.wsgi --log-file -
