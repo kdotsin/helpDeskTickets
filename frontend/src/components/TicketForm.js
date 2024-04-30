@@ -13,7 +13,7 @@ function TicketForm() {
             email,
             description,
         };
-        const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000/'
+        const apiUrl = 'https://aqueous-island-68452-a33e6407fc83.herokuapp.com/'
         try {
             const response = await axios.post(`${apiUrl}/api/tickets/`, ticketData);
             alert('Ticket Submitted Successfully!');

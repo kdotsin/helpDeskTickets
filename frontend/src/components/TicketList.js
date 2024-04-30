@@ -8,7 +8,7 @@ function TicketList() {
         fetchTickets();
     }, []);
 
-    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000/';
+    const apiUrl = 'https://aqueous-island-68452-a33e6407fc83.herokuapp.com/';
 
     const fetchTickets = async () => {
         try {
