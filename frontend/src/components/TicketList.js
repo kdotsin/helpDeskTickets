@@ -27,6 +27,15 @@ function TicketList() {
             console.error('Failed to update status', error);
         }
     };
+
+    const deleteTicket = async (id) => {
+        try {
+            await axios.delete(`${apiUrl}/api/tickets/${id}/`);
+            setTickets(tickets.filter(ticket => ticket.id !== id));
+        } catch (error) {
+            console.error('Failed to delete ticket', error);
+        }
+    };
     
     return (
         <div>
@@ -37,6 +46,7 @@ function TicketList() {
                     <p>{ticket.description}</p>
                     <button onClick={() => updateStatus(ticket.id, 'in_progress')}>Mark In Progress</button>
                     <button onClick={() => updateStatus(ticket.id, 'resolved')}>Mark Resolved</button>
+                    <button onClick={() => deleteTicket(ticket.id)}>Delete Ticket</button>
                 </div>
             ))}
         </div>
