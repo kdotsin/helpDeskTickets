@@ -8,9 +8,11 @@ function TicketList() {
         fetchTickets();
     }, []);
 
+    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000/';
+
     const fetchTickets = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/tickets/');
+            const response = await axios.get(`${apiUrl}/api/tickets/`);
             setTickets(response.data);
         } catch (error) {
             console.error('Failed to fetch tickets', error);
@@ -19,7 +21,7 @@ function TicketList() {
 
     const updateStatus = async (id, status) => {
         try {
-            await axios.patch(`http://localhost:8000/api/tickets/${id}/`, { status });
+            await axios.patch(`${apiUrl}/api/tickets/${id}/`, { status });
             fetchTickets();
         } catch (error) {
             console.error('Failed to update status', error);
