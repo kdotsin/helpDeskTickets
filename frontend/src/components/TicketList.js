@@ -8,7 +8,7 @@ function TicketList() {
         fetchTickets();
     }, []);
 
-    const apiUrl = 'https://aqueous-island-68452-a33e6407fc83.herokuapp.com/';
+    const apiUrl = 'https://aqueous-island-68452-a33e6407fc83.herokuapp.com';
 
     const fetchTickets = async () => {
         try {
